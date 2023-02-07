@@ -23,3 +23,18 @@ void main(void){
 	
 //	typedef int entero; cambiar el nombre de una variable (de int a 'entero')
 }
+
+/*
+
+break; -> rompe el bucle.
+continue; -> vuelve a iterar.
+exit(int) "exit(0)" -> salir del programa.
+
+*/
+
+/*
+
+putchar():
+	llamada al sistema 'write'.
+
+*/

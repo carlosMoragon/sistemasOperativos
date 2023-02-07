@@ -15,4 +15,10 @@ void main(){
 	
 	for(int i = 0; i < 10; i++)
 	printf("\n%d", i);
+	
+	printf("--------------");
+	while(n != 0){
+		printf("\n%d", n);
+		n--;
+	}
 }

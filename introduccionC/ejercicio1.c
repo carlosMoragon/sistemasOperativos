@@ -1,4 +1,4 @@
 #include <stdio.h>
 void main(void){
-	printf("HOLA MUNDO");
+	printf("\nHOLA A TODOS");
 }

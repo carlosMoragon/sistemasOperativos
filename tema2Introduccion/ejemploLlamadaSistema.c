@@ -8,6 +8,7 @@ int main(){
 	
 	int fd;
 	fd = creat(name, 0666); //llamada al sistema para crear un fichero
-	//creat(nombre, permisos)
+	//creat(nombre, permisos) -> al tener la umask = 0002 -> la última terna se sobre escribe en 010.
+	printf("%d\n", fd);
 	return 0;
 }

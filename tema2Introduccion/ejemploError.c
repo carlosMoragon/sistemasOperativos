@@ -9,6 +9,7 @@ void main(){
 
 	char buffer[100]	;
 	int iden = 20;
-	if(read(iden, buffer, 100) == -1) printf("\n%d: %s\n", errno, strerror(errno));
+	if(read(iden, buffer, 100) == -1) //ERROR en el iden (file descriptor)
+	 printf("\n%d: %s\n", errno, strerror(errno));
 	
 }

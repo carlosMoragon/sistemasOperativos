@@ -5,6 +5,7 @@
 
 
 void main(){
+	printf("soy padre pid: %d ppid: %d \n", getpid(), getppid());
 	if(fork() == 0){
 		printf("soy hijo pid: %d ppid: %d \n", getpid(), getppid());
 		if(fork() == 0){

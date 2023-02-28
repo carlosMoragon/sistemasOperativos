@@ -1,0 +1,11 @@
+archivo.txt
+ejercicio3_2
+ejercicio3_2.c
+ejercicio3_3
+ejercicio3_3.c
+ejercicio3_4
+ejercicio3_4.c
+enlanceF_archivo.txt
+enlanceS_del_enlaceFisico.txt
+primerProceso
+primerProceso.c

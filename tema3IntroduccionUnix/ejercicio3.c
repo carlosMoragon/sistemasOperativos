@@ -3,6 +3,10 @@
 #include <sys/types.h>
 #include <stdlib.h>
 
+/*
+Cada proceso debe imprimir su PID y su PPID.
+¿En qué orden se imprimen los mensajes? Justifica tu respuesta
+*/
 
 void main(){
 	
@@ -22,3 +26,8 @@ void main(){
 
 	//wait(NULL) -> devuelve el numero de hijos que tiene el proceso
 }
+
+/*
+Se imprimen en un orden aleatorio, por que no tenemos forma de saber cual procesara primero el sistema operativo.
+
+*/

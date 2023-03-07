@@ -13,8 +13,7 @@ Ejercicio 8. ¿Qué hace el proceso main al recibir la señal SIGTERM?
 void Salir (int sig){
 	switch(sig){
 		case(SIGTERM):
-			printf("Saliendo del programa al recibir la señal
-			SIGTERM\n");
+			printf("Saliendo del programa al recibir la señal SIGTERM\n");
 			exit(EXIT_SUCCESS);
 			break;
 	}
@@ -27,3 +26,8 @@ int main(void){
 	printf("Fin del programa sin recibir la señal SIGTERM\n");
 	exit(EXIT_SUCCESS);
 }
+
+/*
+El proceso Main, al recibir la señal SIGTERM la ignora.
+
+*/

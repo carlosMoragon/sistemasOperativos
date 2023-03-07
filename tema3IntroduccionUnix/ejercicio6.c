@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/*
+Modifica el ejercicio 4 para que el hijo ejecute el
+comando ls y el nieto el comando ps.
+*/
 
 void main(){
 	if(fork() == 0){

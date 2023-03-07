@@ -26,10 +26,12 @@ int main(int argc, char *argv[]){
 /*
 
 Los parámetros de la función execl(), son los siguientes:
-	El path de la llamada al sistema. En este caso "/bin/ls".
-	-
-	-
-	Un valor NULL
+	- El path del fichero que va a ser ejecutado. En este caso "/bin/ls".
+	- El nombre de la llamada al sistema
+	- Extension de la llamada al sistema
+	- Un puntero NULL, para terminar la lista de argumentos.
+
+El comportamiento del proceso tras llamar a la función execl cambia al comportamiento que se le indica en el fichero indicado como primer parámetro.
 
 */
 

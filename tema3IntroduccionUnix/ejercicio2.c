@@ -30,3 +30,7 @@ void main(){
 	while(wait(NULL) > 0);
 
 }
+
+/*
+Parece que no se alternan por que son solo 20 caracteres.
+*/

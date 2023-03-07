@@ -8,12 +8,18 @@
 #include <unistd.h>
 
 char mensaje[] = "Soy el proceso P3 y he recibido una señal del proceso P5\n";
+char mensaje2[] = "Soy P6\n";
 
 void senales(int sig){
 	switch(sig){
 		
 		case(SIGUSR1):
-			write(1, mensaje, strlen(mensaje));
+			for(int i=0; i<strlen(mensaje2); i++){
+				write(1, &mensaje2[i], 1);
+				//lseek(mensaje2, 0, SEEK_SET);
+				sleep(1);
+			}
+			//write(1, mensaje, strlen(mensaje));
 			break;
 	
 	}
@@ -33,7 +39,7 @@ void main (void){
 			
 				if(fork() == 0){
 					if(i==2){
-						sleep(5);
+						//sleep(5);
 						kill(getppid(), SIGUSR1);
 						
 					}

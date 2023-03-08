@@ -15,17 +15,18 @@ void senales(int sig){
 		
 		case(SIGUSR1):
 			//apartado d)
-			/*for(int i=0; i<strlen(mensaje2); i++){
+			for(int i=0; i<strlen(mensaje2); i++){
 				write(1, &mensaje2[i], 1);
 				sleep(1);
-			}*/
+			}
 			
 			// apartado b)
-			//write(1, mensajeb, strlen(mensajeb));
+			write(1, mensajeb, strlen(mensajeb));
 			
 			//apartado c)
-			printf("entra");
-			write(1, mensajec, strlen(mensajec));
+			/*printf("entra");
+			write(1, mensajec, strlen(mensajec));*/
+		
 			break;
 	
 	}
@@ -40,19 +41,20 @@ void main (void){
 		if(fork()== 0){
 			
 			//apartado b)
-			//if(i==2) signal(SIGUSR1, senales); 
+			if(i==2) signal(SIGUSR1, senales); 
 			
 			
 			if(i > 1){
 				pid = fork();
 				if(pid == 0){
 					//Apartado b)
-					/*if(i==2){
+					if(i==2){
 						kill(getppid(), SIGUSR1);
 						
-					}*/
+					}
 					
-					if(i==2) signal(SIGUSR1, senales);
+					//apartado c)
+					//if(i==2) signal(SIGUSR1, senales);
 					//sleep(2);
 					break;
 					
@@ -65,7 +67,7 @@ void main (void){
 			
 			
 			//apartado a)
-			//if(i==1) fd = open("fichero_practica2.txt", O_CREAT, 0666);
+			if(i==1) fd = open("fichero_practica2.txt", O_CREAT, 0666);
 			
 			break;
 		}

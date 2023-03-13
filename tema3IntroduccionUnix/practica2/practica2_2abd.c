@@ -22,11 +22,6 @@ void senales(int sig){
 			
 			// apartado b)
 			write(1, mensajeb, strlen(mensajeb));
-			
-			//apartado c)
-			/*printf("entra");
-			write(1, mensajec, strlen(mensajec));*/
-		
 			break;
 	
 	}
@@ -53,15 +48,9 @@ void main (void){
 						
 					}
 					
-					//apartado c)
-					//if(i==2) signal(SIGUSR1, senales);
-					//sleep(2);
 					break;
 					
 				}
-				printf("la envia");
-//				sleep(2);
-				kill(pid, SIGUSR1);
 				
 			}
 			

@@ -27,4 +27,10 @@ int main(){
 
 }
 
+/*
+Los mensajes aparecen en orden del 0-7. Esto se debe a que se estan creando en orden con un tiempo de espera de 1 segundo, por lo que a cada hilo le da tiempo a ejecutar su funcionalidad asignada
+antes de que se cree otro hilo.
+
+*/
+
 

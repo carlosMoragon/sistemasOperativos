@@ -7,17 +7,18 @@
 
 
 int cuenta = 0;
+int turno = 0;
 
 void * suma(void * args){
-	for(int i= 0; i<100000; i++){
-		cuenta++; //seccion critica
-	}
+	while(turno != 0) //Espera activa
+	for(int i = 0; i<100000; i++)cuenta++; //seccion critica
+	turno = 1;
 }
 
 void * resta(void * args){
-	for(int i= 0; i<100000; i++){
-		cuenta--; //seccion critica
-	}
+	while(turno != 1) //Espera activa
+	for(int i = 0; i<100000; i++)cuenta--; //seccion critica
+	turno = 0;
 }
 
 

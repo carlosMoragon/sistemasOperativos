@@ -11,9 +11,12 @@ sem_t mutex;
 
 int readers = 0;
 
-void * escritor(void * args){
+void * escribir(void * args){
 	sem_wait(&writer);
-	printf("escribir");
+	printf("escribir\n");
+	fflush(stdout);
+	sleep(1);
+	printf("Terminado de escribir\n\n");
 	fflush(stdout);
 	sem_post(&writer);
 }
@@ -28,7 +31,10 @@ void * leer(void * args){
 	
 	//LEER
 	
-	printf("leer: %d\n", *(int*)args);
+	printf("leer\n");
+	fflush(stdout);
+	sleep(1);
+	printf("Terminado de leer\n\n");
 	fflush(stdout);
 	
 	//TERMINAR LECTURA
@@ -49,10 +55,10 @@ void main(){
 	pthread_t escritor;
 	pthread_t lector[20];
 	
-	pthread_create(&escritor, NULL, leer, NULL);	
+	pthread_create(&escritor, NULL, escribir, NULL);	
 	
 	for(int i = 0; i<20; i++){
-		pthread_create(&lector[i], NULL, leer, &i);
+		pthread_create(&lector[i], NULL, leer, NULL);
 		pthread_join(lector[i], NULL);
 		
 	}
